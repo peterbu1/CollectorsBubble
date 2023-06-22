@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Component</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="cardRating.css" rel="stylesheet" type="text/css" />  
+        <link rel="shortcut icon" href="pics/NSX.jpg" /> 
+
+        <style> 
+
+            body {
+                background-color:#F6EEE0;
+            }
+            @media screen and (max-width: 700px){
+                .CardContainer{
+                    flex-direction: column;
+                }
+
+                .card{
+                    padding:1rem;
+
+
+
+                </style>
+
+            </head>
+            <body>
+                <h2>My MakeRatingCard Tutorial Component</h2>
+
+                <div id="content">
+                </div>
+                <div id ="content2">
+                </div>
+
+                <script src="MakeCardRating.js"></script>
+                <script>
+                    
+                    
+                    
+                    var carList = [
+                        {
+                            tabTitle: "Acura",
+                            content: "Bob's 1991 Acura NSX",
+                            image: "pics/acura_nsx.jpeg",
+                            rating: "4"
+                        },
+                        {
+                            tabTitle: "Mitsubishi",
+                            content: "Peter's 1995 Mitsubishi Evolution Lancer",
+                            image: "pics/evo.jpg",
+                            rating: "5"
+                        },
+                        {
+                            tabTitle: "Nissan",
+                            content: "Bryan's Nissan GTR R34",
+                            image: "pics/r34skyline.jpg",
+                            rating: "3"
+                        },
+                        {
+                            tabTitle: "Toyota",
+                            content: "Steven's Supra",
+                            image: "pics/streethuntersupra.jpg",
+                            rating: "2"
+                        },
+                        {
+                            tabTitle: "BMW",
+                            content: "Philip's M3",
+                            image: "pics/m3.jpg",
+                            rating: "3"
+                        },
+                        {
+                            tabTitle: "Mazda",
+                            content: "Liam's RX-7",
+                            image: "pics/rx7.jpg",
+                            rating: "2"
+                        },
+                        {
+                            tabTitle: "Nissan",
+                            content: "Brian's Silvia",
+                            image: "pics/s15.jpg",
+                            rating: "5"
+                        }
+
+                    ];
+                    var carTabCards = MakeCardRating(carList);
+                    document.getElementById("content").appendChild(carTabCards);
+                    
+                    var foodList = [
+                        {
+                            tabTitle: "Charcuterie board",
+                            content: "My Charcuterie board",
+                            image: "pics/food1.jpg",
+                            rating: "1"
+                        },
+                        {
+                            tabTitle: "Spaghetti",
+                            content: "My spaghetti dish",
+                            image: "pics/spaghetti.jpg",
+                            rating: "0"
+                        },
+                        {
+                            tabTitle: "Pho",
+                            content: "Delicious Vietnamese Pho",
+                            image: "https://omnivorescookbook.com/wp-content/uploads/2016/01/1511_Easy-Vietnamese-Pho-Noodle-Soup_002-1.jpg",
+                            rating: "4"
+                        },
+                        {
+                            tabTitle: "Eggrolls",
+                            content: "My eggrolls",
+                            image: "https://images.squarespace-cdn.com/content/v1/52d3fafee4b03c7eaedee15f/1549684315843-8TYE6DC9HP9J27SL75PS/egg+roll.jpg?format=1000w",
+                            rating: "3"
+                        },
+                        {
+                            tabTitle: "Ribeye",
+                            content: "My perfect ribeye steak",
+                            image: "pics/ribeye.jpg",
+                            rating: "5"
+                        }
+                    ];
+                    var foodTabCards = MakeCardRating(foodList);
+                    document.getElementById("content2").appendChild(foodTabCards);
+                    
+                </script>
+            </body>
+        </html>
